@@ -1,11 +1,11 @@
 def get_student():
-    students={}
-    for i in range(10):
-        name=input("Enter student's name")
-        grades=input('Enter grades')
-        final=input('Enter finals result')
-        students[name]={'grades': grades, 'final': final}
-    print(students)
-def academ_integrity():
     pass
+def academ_integrity(students):
+    is_cheater = {}
+    for name, grades in students.items():
+        if -2<grades['final'] - sum(grades['grades'])/len(grades['grades']):
+            is_cheater[name]=False
+        else:
+            is_cheater[name] = False
+    return is_cheater
 def start_program():
