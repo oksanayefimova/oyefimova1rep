@@ -5,6 +5,7 @@ def get_student():
         grades=input('Enter grades')
         final=input('Enter finals result')
         students[name]={'grades': grades, 'final': final}
+    print(students)
 def academ_integrity():
     pass
 def start_program():
